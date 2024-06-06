@@ -30,12 +30,13 @@ SOFTWARE.
 // @supportURL      https://github.com/justcontributor/yt-speed/issues
 // @updateURL       https://github.com/justcontributor/yt-speed/raw/main/script.user.js
 // @downloadURL     https://github.com/justcontributor/yt-speed/raw/main/script.user.js
-// @license         MIT
+// @license         MIT License
 // @version         1.0
-// @description:ko  Userscript that allows you to change the playback speed of YouTube videos more widely
-// @description     유튜브 동영상의 재생속도를 더 폭넓게 변경할 수 있도록 하는 유저 스크립트
+// @description     Userscript that allows you to change the playback speed of YouTube videos more widely
+// @description:ko  유튜브 동영상의 재생속도를 더 폭넓게 변경할 수 있도록 하는 유저 스크립트
 // @author          justcontributor
 // @match           *://www.youtube.com/*
+// @exclude           *://www.youtube.com/shorts/*
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant           none
 // @run-at          document-start
@@ -62,7 +63,7 @@ function addKeyListener() {
         focus === "INPUT" ||
         focus === "TEXTAREA" ||
         e.target.getAttribute("contentEditable");
-      
+
       if (typing) return;
 
       if (e.key === ">" || e.key === "<") {
@@ -96,7 +97,7 @@ function createRateLabel() {
     transform:translate(-50%,0);
     text-align:center;
     background-color: rgba(0,0,0,0.5);
-    display:inline-block;
+    display:none;
     font-size:3rem;
     position:absolute;
     z-index:19;
