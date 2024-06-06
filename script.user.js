@@ -53,9 +53,12 @@ function addKeyListener() {
       if (e.key === ">" || e.key === "<") {
         e.preventDefault();
         e.stopImmediatePropagation();
-        newRate =
-          document.querySelector("video").playbackRate +
-          (e.key === ">" ? 0.25 : -0.25);
+        sign = e.key === ">" ? 1 : -1;
+        step =
+          document.querySelector("video").playbackRate + sign * 0.25 > 2
+            ? 0.5
+            : 0.25;
+        newRate = document.querySelector("video").playbackRate + step * sign;
         if (newRate > 16 || newRate < 0.25) {
           setRateLabelText(`브라우저의 속도 제한에 도달했습니다.`);
           showRateLabel();
