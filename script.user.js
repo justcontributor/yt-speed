@@ -24,15 +24,21 @@ SOFTWARE.
 
 */
 // ==UserScript==
-// @name         More Variable YouTube Speed
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  설명.
-// @author       justcontributor
-// @match        *://www.youtube.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
-// @grant        none
-// @run-at       document-start
+// @name            More Variable YouTube Speed
+// @namespace       https://github.com/justcontributor/yt-speed
+// @homepageURL     https://github.com/justcontributor/yt-speed
+// @supportURL      https://github.com/justcontributor/yt-speed/issues
+// @updateURL       https://github.com/justcontributor/yt-speed/raw/main/script.user.js
+// @downloadURL     https://github.com/justcontributor/yt-speed/raw/main/script.user.js
+// @license         MIT
+// @version         1.0
+// @description:ko  Userscript that allows you to change the playback speed of YouTube videos more widely
+// @description     유튜브 동영상의 재생속도를 더 폭넓게 변경할 수 있도록 하는 유저 스크립트
+// @author          justcontributor
+// @match           *://www.youtube.com/*
+// @icon            https://www.google.com/s2/favicons?sz=64&domain=youtube.com
+// @grant           none
+// @run-at          document-start
 // ==/UserScript==
 
 let checkLoadInterval;
