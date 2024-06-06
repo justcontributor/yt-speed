@@ -56,6 +56,15 @@ function addKeyListener() {
     "keydown",
     (e) => {
       if (!e.shiftKey) return;
+
+      const focus = e.target.tagName.toUpperCase();
+      const typing =
+        focus === "INPUT" ||
+        focus === "TEXTAREA" ||
+        e.target.getAttribute("contentEditable");
+      
+      if (typing) return;
+
       if (e.key === ">" || e.key === "<") {
         e.preventDefault();
         e.stopImmediatePropagation();
